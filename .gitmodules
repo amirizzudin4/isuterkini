@@ -1,0 +1,3 @@
+[submodule "isuterkini/web"]
+	path = isuterkini/web
+	url = https://github.com/amirizzudin4/isuterkini-web.git
