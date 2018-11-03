@@ -1,0 +1,24 @@
+version: "3"
+services:
+  web:
+    build: ./isuterkini
+    container_name: web
+    restart: on-failure
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app
+    # command: npm install
+    # command: npm start
+
+  nginx:
+    build: ./nginx
+    container_name: Nginx
+    restart: on-failure
+    links:
+      - web
+    volumes:
+      - /etc/nginx
+    ports:
+      - "80:80"
+      - "443:443"
