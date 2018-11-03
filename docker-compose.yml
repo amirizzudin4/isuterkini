@@ -8,8 +8,7 @@ services:
       - "3000:3000"
     volumes:
       - /app
-    # command: npm install
-    # command: npm start
+    command: sh -c "npm install && npm start"
 
   nginx:
     build: ./nginx
